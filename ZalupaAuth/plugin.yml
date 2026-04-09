@@ -1,0 +1,29 @@
+name: ZalupaAuth
+main: zalupaauth\Main
+version: 1.0.0
+api: 5.0.0
+author: xzz11222
+license: MIT
+description: Simple login/register auth plugin.
+commands:
+  register:
+    description: Зарегистрировать аккаунт
+    usage: "/register <password> <password>"
+    aliases: ["reg"]
+    permission: zalupaauth.command.register
+  login:
+    description: Войти в аккаунт
+    usage: "/login <password>"
+    aliases: ["l", "log"]
+    permission: zalupaauth.command.login
+  passreset:
+    description: Сбросить пароль игроку
+    usage: "/passreset <name> <password>"
+    permission: zalupaauth.command.passreset
+permissions:
+  zalupaauth.command.register:
+    default: true
+  zalupaauth.command.login:
+    default: true
+  zalupaauth.command.passreset:
+    default: op
