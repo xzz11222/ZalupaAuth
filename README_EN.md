@@ -12,6 +12,14 @@
 - added `/changepass`, `/logout`, `/reauth`, `/authinfo`, `/authreload`
 - logic split into services
 
+## License
+
+This project uses a custom `SessionAuth Custom Non-Sale License`:
+
+- the plugin may be used on donation-based or monetized servers;
+- the plugin, its source code, or packaged builds may not be sold;
+- modified versions may be redistributed for free with the license preserved and changes clearly marked.
+
 ## Data files
 
 - `plugin_data/SessionAuth/players.db` - SQLite database
