@@ -1,33 +1,66 @@
-name: ZalupaAuth
-main: zalupaauth\Main
-version: 1.0.0
+name: SessionAuth
+main: sessionauth\Main
+version: 2.1.0
 api: 5.0.0
 author: xzz11222
-license: Custom
-description: Auth plugin with forms, RU/EN support, trusted sessions, and temporary anti-bruteforce protection.
-
+license: MIT
+description: Session-based login/register auth plugin.
 commands:
   register:
     description: Register an account
     usage: "/register <password> <password>"
     aliases: ["reg"]
-    permission: zalupaauth.command.register
-
+    permission: sessionauth.command.register
   login:
     description: Log into an account
     usage: "/login <password>"
     aliases: ["l", "log"]
-    permission: zalupaauth.command.login
-
+    permission: sessionauth.command.login
   passreset:
     description: Reset a player's password
     usage: "/passreset <name> <password>"
-    permission: zalupaauth.command.passreset
-
+    permission: sessionauth.command.passreset
+  changepass:
+    description: Change your password
+    usage: "/changepass <oldpassword> <newpassword> <newpassword>"
+    permission: sessionauth.command.changepass
+  logout:
+    description: Log out from your account
+    usage: "/logout"
+    permission: sessionauth.command.logout
+  reauth:
+    description: Re-authenticate your account
+    usage: "/reauth"
+    permission: sessionauth.command.reauth
+  authinfo:
+    description: Show auth state for a player
+    usage: "/authinfo <name>"
+    permission: sessionauth.command.authinfo
+  authreload:
+    description: Reload SessionAuth config
+    usage: "/authreload"
+    permission: sessionauth.command.authreload
+  authhelp:
+    description: Show SessionAuth help
+    usage: "/authhelp"
+    aliases: ["authh"]
+    permission: sessionauth.command.authhelp
 permissions:
-  zalupaauth.command.register:
+  sessionauth.command.register:
     default: true
-  zalupaauth.command.login:
+  sessionauth.command.login:
     default: true
-  zalupaauth.command.passreset:
+  sessionauth.command.passreset:
     default: op
+  sessionauth.command.changepass:
+    default: true
+  sessionauth.command.logout:
+    default: true
+  sessionauth.command.reauth:
+    default: true
+  sessionauth.command.authinfo:
+    default: op
+  sessionauth.command.authreload:
+    default: op
+  sessionauth.command.authhelp:
+    default: true
